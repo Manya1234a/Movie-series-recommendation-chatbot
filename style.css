@@ -1,0 +1,168 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'poppins';
+    background: 
+        linear-gradient(135deg, rgba(0,0,0,0.5), rgba(0,0,0,0.8)), /* Gradient overlay */
+        url('/images/image.png'); /* Background image */
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    color: #ffffff; /* Ensure text is readable on dark background */
+}
+
+.container {
+    max-width: 500px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent container for contrast */
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+}
+
+/* Chatbox Styles */
+.chatbox {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    background: rgba(0, 0, 0, 0.7); /* Dark, semi-transparent chatbox background */
+    border-radius: 10px;
+    padding: 10px;
+    position: relative;
+    color: #ffffff; /* Text color for better contrast with background */
+}
+
+.messages {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.message {
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+.user-message {
+  
+    background-color:#8b595959;
+    color: #ffffff;
+    margin-right:10px;
+    margin-bottom:10px;
+    border: 1px solid #f8202081;
+    align-self: flex-end;
+}
+
+.bot-message {
+    background-color: #ffffffb7;
+    color: #000000;
+    margin-left:96px;
+    margin-bottom:25px;
+    font-weight: 300px;
+    border-radius: 1px 10px 1px 20px;
+    border: 1px 2px solid #f82020;
+    
+}
+
+
+
+/* Controls Styles */
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #f82020;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #770707;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #a3241686;
+}
+
+/* Copy Button Styles */
+#copy-info {
+    margin-top: 10px;
+}
+
+
+/* Styling for the Copy Button */
+#copy-btn {
+    background: linear-gradient(135deg,  #770707,#000000); /* Gradient background */
+    border: none; /* Remove default border */
+    color: #fff; /* Text color */
+    padding: 10px 20px; /* Padding for the button */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for background and shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+
+#copy-btn:hover {
+    background: linear-gradient(135deg, #000000, #770707); /* Reversed gradient on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}
+
+.hidden {
+    display: none;
+}
+
+/* Settings Styles */
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    .chatbox {
+        height: 300px;
+        padding: 10px;
+    }
+
+    input[type="text"], button {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        max-width: 95%;
+        padding: 10px;
+    }
+
+    .chatbox {
+        height: 250px;
+        padding: 5px;
+    }
+
+    input[type="text"], button {
+        font-size: 12px;
+        padding: 6px;
+    }
+}
